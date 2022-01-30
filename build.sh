@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "configure build path"
+
+KERNEL_TOP_PATH="$( cd "$(dirname "$0")" ; pwd -P)"
+OUTPUT="$KERNEL_TOP_PATH/out"
+echo $OUTPUT
+
+KERNEL=kernel7l
+BUILD_LOG="$KERNEL_TOP_PATH/rpi_log.txt"
+
+echo "mv kernel source"
+cd linux
+
+echo "make defconfig"
+make O=$OUTPUT bcm2711_defconfig
+
+echo "kernel build"
+
+make O=$OUTPUT zImage modules dtbs -j4 2>&1 | tee $BUILD_LOG
