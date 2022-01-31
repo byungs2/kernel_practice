@@ -6,7 +6,7 @@ echo $OUTPUT
 
 cd linux
 
-sudo make O=$OUTPUT modules_install
-sudo cp $OUTPUT/arch/arm/boot/dts/*.dtb /boot/
-sudo cp $OUTPUT/arch/arm/boot/dts/overlays/*.dtb* /boot/overlays/
-sudo cp $OUTPUT/arch/arm/boot/zImage /boot/$KERNEL.img
+make O=$OUTPUT modules_install
+cp $OUTPUT/arch/arm/boot/dts/*.dtb /boot/
+cp $OUTPUT/arch/arm/boot/dts/overlays/*.dtb* /boot/overlays/
+cp $OUTPUT/arch/arm/boot/zImage /boot/kernel7l.img
