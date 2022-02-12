@@ -1,14 +1,12 @@
 make[1]: Entering directory '/home/pi/Desktop/workspace/4.19_kernel/out'
-  GEN     ./Makefile
 scripts/kconfig/conf  --syncconfig Kconfig
-  GEN     ./Makefile
   Using /home/pi/Desktop/workspace/4.19_kernel/linux as source for kernel
   CALL    /home/pi/Desktop/workspace/4.19_kernel/linux/scripts/checksyscalls.sh
-  CPP     kernel/sched/core.i
+  CPP     drivers/soc/bcm/rpi_debugfs.i
   CHK     include/generated/compile.h
   GZIP    kernel/config_data.gz
   Kernel: arch/arm/boot/Image is ready
   Building modules, stage 2.
-  Kernel: arch/arm/boot/zImage is ready
   MODPOST 1611 modules
+  Kernel: arch/arm/boot/zImage is ready
 make[1]: Leaving directory '/home/pi/Desktop/workspace/4.19_kernel/out'

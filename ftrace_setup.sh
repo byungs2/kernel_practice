@@ -16,7 +16,7 @@ echo function > /sys/kernel/debug/tracing/current_tracer
 sleep 1
 echo "function traced enabled"
 
-echo rpi_get_interrupt_info > /sys/kernel/debug/tracing/set_ftrace_filter
+echo $1 > /sys/kernel/debug/tracing/set_ftrace_filter
 sleep 1
 echo "set ftrace filter enabled"
 
